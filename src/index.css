@@ -1,56 +1,6 @@
 * {
-  margin: 0 auto;
-  overflow-x: hidden;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-body {
-  width: 100%;
-};
-
-
-/*Text-styling */
-p{
-  font-family: 'EB Garamond', serif;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 28.71px;
-  color: #000000;
-};
-
-h1{
-  height: 38px;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 38px;
-};
-
-h2{
-  font-weight: 900;
-  font-size: 32px;
-  line-height: 43px;
-  color: #000000;
-};
-  
-h3{
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 32px;
-  color: #565656;
-};
-
-h4{
-  height: 108px;
-  font-weight: 700;
-  font-size: 80px;
-  line-height: 108px;
-};
-
-h5{
-  height: 32px;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
-  color: #FFFFFF;
-  padding: 2px;
-};
+/*# sourceMappingURL=index.css.map */

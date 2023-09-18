@@ -1,0 +1,67 @@
+body {
+    width: 100%;
+    margin: 0 auto;
+
+    //Background color Scheme
+   /*  $color-primary: #ffff; //white
+    $color-secondary: #EDFFFF; // blueish
+    $color-tertiary: #FCEDEA; // pinkish
+    $color-forth: #fdf2e4; // Yellowish */
+
+    // Font colors
+    $primary-font-color: #0000;
+    $secondary-font-color: #0B24F5;
+    $tertiary-font-color: #565656;
+    // Font styles
+    $heading-font-family: 'Satoshi', sans-serif;
+    $body-font-family: 'EB Garamond', serif;
+    $body-font-size: 22px;
+    $body-font-weight: 400;
+
+    /* Nested styles for specific elements inside body */
+    p {
+        font-weight: $body-font-weight;
+        font-size: $body-font-size;
+        font-family: $body-font-family;
+        line-height: 28.71px;;
+      }
+    
+    h1,h2,h3,h4,h5{
+        font-family: $heading-font-family;
+        font-weight: 700; //overridden individually if needed
+    }
+  
+    h1 {
+      line-height: 38px;
+      height: 38px;
+      font-size: 28px;
+      color: $secondary-font-color;
+    }
+  
+    h2 {
+      font-weight: 900;
+      font-size: 32px;
+      line-height: 43px;
+    }
+  
+    h3 {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 32px;
+      color: $tertiary-font-color;
+    }
+  
+    h4 {
+      height: 108px;
+      font-size: 80px;
+      line-height: 108px;
+      color: $secondary-font-color;
+    }
+  
+    h5 {
+      height: 32px;
+      font-size: 24px;
+      line-height: 32px;
+      padding: 2px;
+    }
+  }

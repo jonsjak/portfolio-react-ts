@@ -1,10 +1,18 @@
 import { PersonalLinks } from './PersonalLinks';
+import styled from 'styled-components';
+
+const PresentationContainer = styled.div`
+  margin: 56px auto 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`
 
 export const Presentation = () => {
   return (
-    <div className="presentation">
+    <PresentationContainer>
         <p>Frontend developer with a background in social science. Hoping to use my skills in the lines of sustainability. I'm a thinker and a creator aiming to find exciting viable solutions. Never satisfied - always learning, always developing.</p>
         <PersonalLinks />
-    </div>
+    </PresentationContainer>
   )
 };
