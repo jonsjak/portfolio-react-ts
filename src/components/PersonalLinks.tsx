@@ -6,12 +6,14 @@ import styled from "styled-components";
 const Navbar = styled.nav`
   margin-top: 24px;
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100%;
 `
 
 export const PersonalLinks = () => {
   return (
-    <Navbar className="soMe">
+    <Navbar>
         <a href="https://www.linkedin.com/in/jonas-jakobson-929672189/" target="_blank" rel="noreferrer">
             <img className="linkedIn-logo" src={linkedInHover} alt="LinkedIn-logo" />
         </a>

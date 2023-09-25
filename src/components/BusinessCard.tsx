@@ -5,7 +5,6 @@ const BusinessCardContainer = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin: 48px auto 24px;
   gap: 12px;
 `
 
@@ -14,7 +13,7 @@ const ProfilePicture = styled.img`
   height: 164px;
   border-radius: 50%;
   margin: 0 auto 30px;
-  align-self: center;
+  display: inline-block;
 `
 // Need further styling!
 const TitleText = styled.div`
