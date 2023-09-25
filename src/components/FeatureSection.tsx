@@ -2,85 +2,95 @@ import styled from "styled-components";
 import { FeatureDataList } from "../lists/featureDataList";
 import GithubLogo from "../images/github-big-black.svg";
 import LiveDemoLogo from "../images/globe-big-black.svg";
+import { GithubButton, StyledLogo } from "./buttons/GithubButton";
+import { LiveDemoButton } from "./buttons/LiveDemoButton";
+import { DemoButtonsContainer } from "./buttons/DemoButtonsContainer";
 
 const FeatureSectionContainer = styled.section`
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
   padding: 64px 24px;
   max-width: 100%;
-  gap: 80px;
+  margin-bottom: 5px;
 `;
 
-const FeatureContainer = styled.div`
-  border: 3px dotted black;
-`;
+
 
 const FeatureImage = styled.img`
   width: 327px;
   height: 280px;
   object-fit: cover;
-  background-color: black;
+  box-shadow: -1px 4px 11px 1px;
+  margin-bottom: 24px;
 `
-
-const StyledLogo = styled.img`
-  width: 21px;
-  height: 21px;
-  opacity: 20%;
-`
-
-const LogoButton = styled.button`
-  width: 200px;
-  height: 48px;
-  border-radius: 40px;
-  font-family: 'Satoshi';
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 27px;
-  color: #333333;
+const ArticleContainer = styled.div`
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 327px;
+  margin: 64px 0 80px 0;
+`
+
+const ArticleText = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 24px;
+`
+
+const Tags = styled.div`
+  margin: 12px auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  background-color: #F5F5F5;
-  text-decoration: none;
-  gap: 21px;
-  outline: none;
+  color: white;
+  gap: 12px;
+
+  p {
+    background-color: black;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 16px;
+    padding: 2px;
+  }
 `
 
 export const FeatureSection: React.FC = () => {
   return (
-    <FeatureSectionContainer className="featureSec">
-      <h4 className="featureHeader">Featured Projects</h4>
-      <FeatureContainer>
-        {FeatureDataList.map((feature, index) => (
-          <div key={index}>
-            <FeatureImage className="feature-pic" src={feature.imageSrc} alt={feature.altText} />
-            <div className="featureArt">
-              <h2 className="newsHeader">{feature.title}</h2>
-              <p className="newsTxt">{feature.description}</p>
-              
-              {/* feature tags */}
-              <div className="tags">
-                {feature.featureTags.map((tag, tagIndex) => (
-                  <span key={tagIndex}>{tag}</span>
-                ))}
-              </div>
-              {/* Buttons */}
-              <div className="button-container">
-                <LogoButton className="github-button">
-                  <StyledLogo src={GithubLogo} href={feature.githubLink} alt="github logo" />
-                  View the code
-                </LogoButton>
-                <LogoButton className="live-demo" href={feature.deployLink} target="_blank" rel="noopener noreferrer">
-                  <StyledLogo src={LiveDemoLogo} alt="globe logo" />
-                  Live demo
-                </LogoButton>
-              </div>
-            </div>
-          </div>
-        ))}
-      </FeatureContainer>
+    <FeatureSectionContainer>
+      <h4>Featured Projects</h4>
+      
+      {FeatureDataList.map((feature, index) => (
+        <ArticleContainer key={index}>
+          <FeatureImage src={feature.imageSrc} alt={feature.altText} />
+
+          <ArticleText>
+            <h2 className="newsHeader">{feature.title}</h2>
+            <p className="newsTxt">{feature.description}</p>
+            <Tags>
+              {feature.featureTags.map((tag, tagIndex) => (
+                <p key={tagIndex}>{tag}</p>
+              ))}
+            </Tags>
+          </ArticleText>
+          
+          
+          
+
+          {/* Buttons */}
+          <DemoButtonsContainer>
+            <GithubButton className="github-button" href={feature.githubLink} >
+              <StyledLogo src={GithubLogo} alt="github logo" />
+              View the code
+            </GithubButton>
+            <LiveDemoButton className="live-demo" href={feature.deployLink} target="_blank" rel="noopener noreferrer">
+              <StyledLogo src={LiveDemoLogo} alt="globe logo" />
+              Live demo
+            </LiveDemoButton>
+          </DemoButtonsContainer>
+        </ArticleContainer>
+      ))}
     </FeatureSectionContainer>
   );
 };
