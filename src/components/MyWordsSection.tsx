@@ -1,22 +1,77 @@
 import electricCar from "../images/electric-car.jpg";
 import articleIcon from "../images/article.svg";
+import styled from "styled-components";
+
+const MyWordsSectionContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FCEDEA;
+    padding: 64px 24px;
+
+    h4 {
+        color: #EB5577;
+        margin-bottom: 64px;
+    }
+`
+
+const Image = styled.img`
+    height: 340px;
+    max-width: 90%;
+    margin-bottom: 40px;
+`
+
+const TextBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+`
+
+const DateHeading = styled.h3`
+    color:  #EB5577;
+    font-size: 20px;
+    font-weight: 600;
+`
+
+const ReadArticleButton = styled.a`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 178px;
+    height: 48px;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    font-family: 'Satoshi', sans-serif;
+    color: #333333;
+    gap: 7px;
+    justify-content: space-evenly;
+    margin-top: 18px;
+    background-color: #FFFFFF;
+    text-decoration: none;
+
+    &:hover {
+        background-color: #FFD338;
+    }
+`
 
 export const MyWordsSection = () => {
   return (
-    <div className="myWordsSec">
-        <h4 className="myWordsHeader">My Words</h4>
-        <span className="article-container">
-            <article className="article1 article">
-                <img className="myWordsImg" src={electricCar} alt="Electric Car" />
-                <h3 className="date-header">March 2023</h3>
+    <MyWordsSectionContainer>
+        <article>
+            <h4>My Words</h4>
+            <Image src={electricCar} alt="Electric Car" />
+            <TextBox>
+                <DateHeading>March 2023</DateHeading>
                 <h2 className="newsHeader">Driving Towards Sustainability With Technology as Co-Driver</h2>
                 <p>Artificial intelligence (AI) can play a vital role in combating climate change by analyzing data and improving energy efficiency.
                     However, it's our responsibility as humans to use AI ethically and prioritize sustainability to protect the planet for future generations.</p>
-                <a href="https://www.linkedin.com/pulse/driving-towards-sustainability-technology-co-driver-jonas-jakobson/?trackingId=uNzJrYLPYkWmzXmgdDaUhQ%3D%3D" className="article-button" target="_blank" rel="noreferrer">
+                <ReadArticleButton href="https://www.linkedin.com/pulse/driving-towards-sustainability-technology-co-driver-jonas-jakobson/?trackingId=uNzJrYLPYkWmzXmgdDaUhQ%3D%3D" className="article-button" target="_blank" rel="noreferrer">
                     <img className="article-icon" src={articleIcon} alt="news icon" />Read article
-                </a>
-            </article>
-        </span>
-    </div>
+                </ReadArticleButton>
+            </TextBox>
+        </article>
+    </MyWordsSectionContainer>
   )
 }
