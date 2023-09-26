@@ -6,8 +6,6 @@ import styled from 'styled-components';
 const TimeToTalkSectionContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   padding: 64px 24px;
 
   img {
@@ -18,7 +16,7 @@ const TimeToTalkSectionContainer = styled.div`
 `
 
 const TimeToTalkHeading = styled.h4`
-  font-size: 58;
+  font-size: 58px;
   color: #EB5577;
 `
 

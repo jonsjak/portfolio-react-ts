@@ -7,7 +7,7 @@ const Navbar = styled.nav`
   margin-top: 24px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   min-width: 100%;
 `
 

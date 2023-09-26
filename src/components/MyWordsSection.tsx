@@ -17,20 +17,24 @@ const MyWordsSectionContainer = styled.div`
 
 const Image = styled.img`
     height: 340px;
-    max-width: 90%;
-    margin-bottom: 40px;
+    width: 327px;
+    object-fit: contain;
 `
 
 const TextBox = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 4px;
 `
 
 const DateHeading = styled.h3`
     color:  #EB5577;
     font-size: 20px;
     font-weight: 600;
+`
+
+const NewsHeading = styled.h2`
+    margin-bottom: 24px;
 `
 
 const ReadArticleButton = styled.a`
@@ -64,11 +68,11 @@ export const MyWordsSection = () => {
             <Image src={electricCar} alt="Electric Car" />
             <TextBox>
                 <DateHeading>March 2023</DateHeading>
-                <h2 className="newsHeader">Driving Towards Sustainability With Technology as Co-Driver</h2>
+                <NewsHeading>Driving Towards Sustainability With Technology as Co-Driver</NewsHeading>
                 <p>Artificial intelligence (AI) can play a vital role in combating climate change by analyzing data and improving energy efficiency.
                     However, it's our responsibility as humans to use AI ethically and prioritize sustainability to protect the planet for future generations.</p>
                 <ReadArticleButton href="https://www.linkedin.com/pulse/driving-towards-sustainability-technology-co-driver-jonas-jakobson/?trackingId=uNzJrYLPYkWmzXmgdDaUhQ%3D%3D" className="article-button" target="_blank" rel="noreferrer">
-                    <img className="article-icon" src={articleIcon} alt="news icon" />Read article
+                    <img src={articleIcon} alt="news icon" />Read article
                 </ReadArticleButton>
             </TextBox>
         </article>

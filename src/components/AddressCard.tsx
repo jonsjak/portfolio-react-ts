@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const AddressInfo = styled.address`
   margin: 56px 0 99px 0;
+  line-height: 1.5;
   
   a {
     color: black;

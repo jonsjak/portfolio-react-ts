@@ -9,13 +9,9 @@ import { DemoButtonsContainer } from "./buttons/DemoButtonsContainer";
 const FeatureSectionContainer = styled.section`
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 64px 24px;
-  max-width: 100%;
   margin-bottom: 5px;
 `;
-
-
 
 const FeatureImage = styled.img`
   width: 327px;
