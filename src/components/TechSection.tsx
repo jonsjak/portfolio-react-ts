@@ -11,7 +11,13 @@ const TechSectionContainer = styled.section`
   padding: 64px 24px 120px 24px;
   width: 100%;
   gap: 62px;
-`
+
+  @media (min-width: 668px) and (max-width: 1024px) {
+    p {
+    width: 500px;
+  }
+  };
+`;
 
 export const TechSection = () => {
   return (
@@ -20,4 +26,4 @@ export const TechSection = () => {
       <p className="techTxt">HTML, CSS, JavaScript, ES6, React, Redux, Node, Express, MongoDB, Pair-programming, Github, Agile methodology.</p>
     </TechSectionContainer>
   )
-}
+};

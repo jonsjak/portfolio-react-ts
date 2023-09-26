@@ -19,6 +19,10 @@ const FeatureImage = styled.img`
   object-fit: cover;
   box-shadow: -1px 4px 11px 1px;
   margin-bottom: 24px;
+
+  @media (min-width: 668px) and (max-width: 1024px) {
+    width: 184px;
+  }
 `
 const ArticleContainer = styled.div`
   display: flex;
@@ -26,6 +30,14 @@ const ArticleContainer = styled.div`
   justify-content: space-between;
   width: 327px;
   margin: 64px 0 80px 0;
+
+  @media (min-width: 668px) and (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: 184px 1fr;
+    width: 100%;
+    height: 280px;
+    gap: 20px;
+  }
 `
 
 const ArticleText = styled.div`
@@ -33,6 +45,10 @@ const ArticleText = styled.div`
   flex-direction: column;
   gap: 18px;
   margin-bottom: 24px;
+
+  @media (min-width: 668px) and (max-width: 1024px) {
+    justify-content: space-between;
+  }
 `
 
 const Tags = styled.div`
@@ -50,6 +66,10 @@ const Tags = styled.div`
     font-size: 16px;
     padding: 2px;
   }
+
+  @media (min-width: 668px) and (max-width: 1024px) {
+    margin: 0;
+  }
 `
 
 export const FeatureSection: React.FC = () => {
@@ -60,7 +80,6 @@ export const FeatureSection: React.FC = () => {
       {FeatureDataList.map((feature, index) => (
         <ArticleContainer key={index}>
           <FeatureImage src={feature.imageSrc} alt={feature.altText} />
-
           <ArticleText>
             <h2 className="newsHeader">{feature.title}</h2>
             <p className="newsTxt">{feature.description}</p>
@@ -69,13 +88,8 @@ export const FeatureSection: React.FC = () => {
                 <p key={tagIndex}>{tag}</p>
               ))}
             </Tags>
-          </ArticleText>
-          
-          
-          
 
-          {/* Buttons */}
-          <DemoButtonsContainer>
+            <DemoButtonsContainer>
             <GithubButton className="github-button" href={feature.githubLink} >
               <StyledLogo src={GithubLogo} alt="github logo" />
               View the code
@@ -85,6 +99,7 @@ export const FeatureSection: React.FC = () => {
               Live demo
             </LiveDemoButton>
           </DemoButtonsContainer>
+          </ArticleText>
         </ArticleContainer>
       ))}
     </FeatureSectionContainer>

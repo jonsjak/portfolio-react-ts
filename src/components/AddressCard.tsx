@@ -11,7 +11,11 @@ const AddressInfo = styled.address`
     text-decoration: none;
     font-weight: 700;
   }
-`
+
+  @media (min-width: 668px) and (max-width: 1024px) {
+    text-align: center;
+  }
+`;
 
 export const AddressCard = () => {
     return (

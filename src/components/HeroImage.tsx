@@ -4,6 +4,7 @@ import styled from "styled-components";
 const StyledHeroImage = styled.img`
   filter: grayscale(100%);
   display: none; //no hero on mobile device
+  object-fit: cover;
 
   @media (min-width: 668px) and (max-width: 1024px) {
     display: block;

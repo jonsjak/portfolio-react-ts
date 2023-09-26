@@ -6,6 +6,10 @@ const PresentationContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @media (min-width: 668px) and (max-width: 1024px) { 
+   margin-left: 15%;
+  } 
 `
 
 export const Presentation = () => {

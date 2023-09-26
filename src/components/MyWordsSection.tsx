@@ -13,6 +13,12 @@ const MyWordsSectionContainer = styled.div`
         color: #EB5577;
         margin-bottom: 64px;
     }
+
+    @media (min-width: 668px) and (max-width: 1024px) {
+        h4 {
+            margin-bottom: 53px;
+        }
+    }
 `
 
 const Image = styled.img`

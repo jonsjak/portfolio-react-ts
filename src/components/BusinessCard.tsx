@@ -6,6 +6,14 @@ const BusinessCardContainer = styled.div`
   flex-direction: column;
   text-align: left;
   gap: 12px;
+
+  @media (min-width: 668px) and (max-width: 1024px) { 
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 29px;
+    margin-left: 10%;
+  } 
 `
 
 const ProfilePicture = styled.img`
@@ -14,14 +22,22 @@ const ProfilePicture = styled.img`
   border-radius: 50%;
   margin: 0 auto 30px;
   display: inline-block;
-`
-// Need further styling!
+
+  @media (min-width: 668px) and (max-width: 1024px) {
+    display: inline;
+    text-align: left;
+    margin: 0;
+  }
+`;
+
 const TitleText = styled.div`
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
   padding: 18px auto;
-`
+`;
+
 export const BusinessCard = () => {
   return (
     <BusinessCardContainer>

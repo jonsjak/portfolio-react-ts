@@ -9,7 +9,7 @@ const Navbar = styled.nav`
   align-items: center;
   justify-content: space-evenly;
   min-width: 100%;
-`
+`;
 
 export const PersonalLinks = () => {
   return (

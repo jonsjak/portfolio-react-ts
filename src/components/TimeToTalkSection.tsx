@@ -13,12 +13,20 @@ const TimeToTalkSectionContainer = styled.div`
     margin-top: 56px;
     margin-bottom: 29px;
   }
-`
+
+  @media (min-width: 668px) and (max-width: 1024px) {
+    align-items: center;
+  }
+`;
 
 const TimeToTalkHeading = styled.h4`
   font-size: 58px;
   color: #EB5577;
-`
+
+  @media (min-width: 668px) and (max-width: 1024px) {
+    font-size: 120px;
+  }
+`;
 
 export const TimeToTalkSection = () => {
   return (
