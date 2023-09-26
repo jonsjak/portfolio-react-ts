@@ -8,18 +8,18 @@ import HappyThoughtsImage from '../images/happy-thoughts.png';
 import AncientTimesImage from '../images/ancient-times.jpg';
 import ChatbotImage from '../images/chatbot.jpg';
 
-type FeatureDataList = {
+export interface FeatureData {
     index: number;
-    imageSrc: React.FC;
+    imageSrc: string;
     altText: string;
     title: string;
     description: string;
-    featureTags: string;
+    featureTags: string[];
     githubLink: string;
     deployLink: string;
 }
 
-export const FeatureDataList = [
+export const FeatureDataList: FeatureData[] = [
     {
         index: 1,
         imageSrc: MovieGlobeImg,

@@ -1,5 +1,6 @@
 import profileImg from "../images/Portfolio.jpg";
 import styled from "styled-components";
+import { BussinessInfo } from "../text-content/BussinessInfo";
 
 const BusinessCardContainer = styled.div`
   display: flex;
@@ -50,9 +51,9 @@ export const BusinessCard = () => {
     <BusinessCardContainer>
       <ProfilePicture src={profileImg} alt="Jonas" />
       <TitleText>
-        <h1>Jonas Jakobson</h1>
-        <h2>Frontend developer</h2>
-        <h3>+ photographer</h3>
+        <h1>{BussinessInfo.name}</h1>
+        <h2>{BussinessInfo.jobTitle}</h2>
+        <h3>{BussinessInfo.secondaryTitle}</h3>
       </TitleText> 
     </BusinessCardContainer>
   )

@@ -5,7 +5,7 @@ export interface TechLists {
     moreList: string[];
     upcomingList: string[];
     toolboxList: string[];
-  }
+  };
   
   export const techLists: TechLists = {
     codeList: [

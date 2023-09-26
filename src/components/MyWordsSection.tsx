@@ -1,6 +1,7 @@
 import electricCar from "../images/electric-car.jpg";
 import articleIcon from "../images/article.svg";
 import styled from "styled-components";
+import { NewsText } from "../text-content/NewsText";
 
 const MyWordsSectionContainer = styled.div`
     display: flex;
@@ -24,14 +25,22 @@ const MyWordsSectionContainer = styled.div`
 const Image = styled.img`
     height: 340px;
     width: 327px;
-    object-fit: contain;
+    object-fit: cover;
+
+    @media (min-width: 668px) {
+        width: 564px;
+    }
 `
 
 const TextBox = styled.div`
     display: flex;
     flex-direction: column;
     gap: 4px;
-`
+    width: 327px;
+    @media (min-width: 668px) {
+        width: 564px
+    };
+`;
 
 const DateHeading = styled.h3`
     color:  #EB5577;
@@ -74,9 +83,8 @@ export const MyWordsSection = () => {
             <Image src={electricCar} alt="Electric Car" />
             <TextBox>
                 <DateHeading>March 2023</DateHeading>
-                <NewsHeading>Driving Towards Sustainability With Technology as Co-Driver</NewsHeading>
-                <p>Artificial intelligence (AI) can play a vital role in combating climate change by analyzing data and improving energy efficiency.
-                    However, it's our responsibility as humans to use AI ethically and prioritize sustainability to protect the planet for future generations.</p>
+                <NewsHeading>{NewsText.header}</NewsHeading>
+                <p>{NewsText.text}</p>
                 <ReadArticleButton href="https://www.linkedin.com/pulse/driving-towards-sustainability-technology-co-driver-jonas-jakobson/?trackingId=uNzJrYLPYkWmzXmgdDaUhQ%3D%3D" className="article-button" target="_blank" rel="noreferrer">
                     <img src={articleIcon} alt="news icon" />Read article
                 </ReadArticleButton>

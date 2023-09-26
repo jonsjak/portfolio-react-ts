@@ -29,7 +29,7 @@ const PersonalInfo = styled.div`
 }
 `;
 
-export const Header = () => {
+export const Header: React.FC = () => {
   return (
     <HeaderSection>
       <HeroImage />

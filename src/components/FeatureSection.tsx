@@ -11,6 +11,13 @@ const FeatureSectionContainer = styled.section`
   flex-direction: column;
   padding: 64px 24px;
   margin-bottom: 5px;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    margin-left: 20%;
+  }
 `;
 
 const FeatureImage = styled.img`
@@ -23,6 +30,14 @@ const FeatureImage = styled.img`
   @media (min-width: 668px) and (max-width: 1024px) {
     width: 184px;
   }
+
+  @media (min-width: 1024px) {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    margin: 0;
+  }
+
 `
 const ArticleContainer = styled.div`
   display: flex;
@@ -38,7 +53,13 @@ const ArticleContainer = styled.div`
     height: 280px;
     gap: 20px;
   }
-`
+
+  @media (min-width: 1024px) {
+    width: 820px;
+    flex-direction: row;
+    gap: 40px;
+  }
+`;
 
 const ArticleText = styled.div`
   display: flex;

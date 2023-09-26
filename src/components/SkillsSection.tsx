@@ -18,7 +18,13 @@ const SkillSectionContainer = styled.div`
      display: grid;
      grid-template-columns: repeat(2, 200px);
      align-items: flex-start;
-    };
+    }
+
+    @media (min-width: 1024px) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: flex-start;
+    }
 `;
 
 const SkillList = styled.ul`
@@ -31,8 +37,8 @@ const SkillList = styled.ul`
 `;
 
 const SkillSectionHeader = styled.h4`
-   @media (min-width: 668px) and (max-width: 1024px) {
-    grid-column: span 2;
+   @media (min-width: 668px) {
+    grid-column: 1 / -1;
    }
 `;
 

@@ -1,7 +1,5 @@
-import linkedInHover from "../images/linkedin-hover.svg";
-import GithubHover from "../images/github-hover.svg";
-import StackHover from "../images/stack-hover.svg";
 import styled from "styled-components";
+import { Links } from '../links/Links';
 
 const Navbar = styled.nav`
   margin-top: 24px;
@@ -11,18 +9,19 @@ const Navbar = styled.nav`
   min-width: 100%;
 `;
 
-export const PersonalLinks = () => {
+export const PersonalLinks: React.FC = () => {
   return (
     <Navbar>
-        <a href="https://www.linkedin.com/in/jonas-jakobson-929672189/" target="_blank" rel="noreferrer">
-            <img className="linkedIn-logo" src={linkedInHover} alt="LinkedIn-logo" />
+      {Links.map((link, index) => (
+        <a
+          href={link.href}
+          target="_blank"
+          rel="noreferrer"
+          key={index}
+        >
+          <img src={link.imgSrc} alt={link.imgAlt} />
         </a>
-        <a href="https://github.com/jonsjak" target="_blank" rel="noreferrer">
-            <img className="github-logo" src={GithubHover} alt="Github-logo" />
-        </a>
-        <a href="https://stackoverflowteams.com/c/technigo/users/454/?tab=profile" target="_blank" rel="noreferrer">
-            <img className="stackoverflow-logo" src={StackHover} alt="Stackoverflow-logo" />
-        </a>
+      ))}
     </Navbar>
   )
 };

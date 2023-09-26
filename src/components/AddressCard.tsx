@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { AddressInfo } from "../text-content/AddressInfo";
 
-const AddressInfo = styled.address`
+const AddressContainer = styled.address`
   margin: 56px 0 99px 0;
   line-height: 1.5;
   
@@ -12,18 +13,18 @@ const AddressInfo = styled.address`
     font-weight: 700;
   }
 
-  @media (min-width: 668px) and (max-width: 1024px) {
+  @media (min-width: 668px) {
     text-align: center;
   }
 `;
 
 export const AddressCard = () => {
     return (
-      <AddressInfo>
-        <a className="phone" href="tel:+46707483261">+46 (0)707 48 32 61</a>
+      <AddressContainer>
+        <a href="tel:+46707483261">{AddressInfo.phone}</a>
         <br></br>
-        <a href="mailto:jonas.jakobson@gmail.com" className="mail">jonas.jakobson@gmail.com</a>
-      </AddressInfo>
+        <a href="mailto:jonas.jakobson@gmail.com"> {AddressInfo.email}</a>
+      </AddressContainer>
     )
   };
   
