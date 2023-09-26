@@ -9,6 +9,11 @@ const PresentationContainer = styled.div`
 
   @media (min-width: 668px) and (max-width: 1024px) { 
    margin-left: 15%;
+  }
+
+  @media (min-width: 1024px) { 
+   width: 500px;
+   max-width: 90%;
   } 
 `
 

@@ -15,8 +15,10 @@ const StyledHeroImage = styled.img`
   
   @media (min-width: 1024px) {
     display: inline-block;
-    width: 50%;
     height: 980px;
+    width: 50%;
+    object-position: 12% 0px;
+    zoom: 0.7;
   };
 `;
 

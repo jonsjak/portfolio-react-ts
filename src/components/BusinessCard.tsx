@@ -12,9 +12,16 @@ const BusinessCardContainer = styled.div`
     flex-direction: row;
     align-items: center;
     gap: 29px;
-    margin-left: 10%;
-  } 
-`
+  }
+
+  @media (min-width: 1024px) {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 29px;
+    max-width: 100%;
+  }
+`;
 
 const ProfilePicture = styled.img`
   width: 164px;
