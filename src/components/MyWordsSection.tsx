@@ -75,7 +75,7 @@ const ReadArticleButton = styled.a`
     }
 `
 
-export const MyWordsSection = () => {
+export const MyWordsSection: React.FC = () => {
   return (
     <MyWordsSectionContainer>
         <article>

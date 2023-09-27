@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import downArrow from "../images/downarrow.svg";
 import styled, { keyframes } from "styled-components";
 
@@ -49,18 +50,41 @@ const ArrowImage = styled.img`
 `;
 
 const ScrollArrowFunction: React.FC = () => {
-	//scrolls the window by 800 pixels
+  const [arrowFlipped, setArrowFlipped] = useState<boolean>(false);
+
+
+  useEffect(() => {
+    const toggleArrowDirection = () => {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        console.log("At the bottom of the page");
+        setArrowFlipped(true);
+        console.log(arrowFlipped);
+      } else {
+        setArrowFlipped(false);
+        console.log(!arrowFlipped);
+      }
+    }
+  
+    // Keeps track of window position
+    window.addEventListener("scroll", toggleArrowDirection);
+  
+    // Event listener removed when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", toggleArrowDirection);
+    };
+  }, []);  
+
 	const onDownArrowClick = () => {
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-      // scroll to top
+      // When btn is clicked, if at bottom scrolls back to top...
       setTimeout(() => {
         window.scrollTo({
-          top: 0, // scrolls back to top
+          top: 0,
           behavior: 'smooth'
         }); 
       }, 1000);
     }else { window.scrollTo({
-      top: window.scrollY + 900, // scrolls down 900px
+      top: window.scrollY + 900, // ...else scrolls down 900px
       behavior: 'smooth'
     });};
 	}

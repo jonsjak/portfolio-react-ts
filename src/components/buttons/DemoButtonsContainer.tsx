@@ -10,6 +10,4 @@ export const DemoButtonsContainer = styled.div`
         flex-direction: row-reverse;
         width: 372px;
     }
-
-
-`
+`;

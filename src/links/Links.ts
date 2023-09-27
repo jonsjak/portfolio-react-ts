@@ -5,7 +5,8 @@ import StackHover from "../images/stack-hover.svg";
 interface Link {
     href: string;
     imgSrc: string;
-    imgAlt: string
+    imgAlt: string;
+    
   };
   
   export const Links: Link[] = [

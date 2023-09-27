@@ -1,4 +1,4 @@
-import { PersonalLinks } from './PersonalLinks';
+import { PersonalLinks } from './buttons/PersonalLinks';
 import styled from 'styled-components';
 import { PresentationText } from '../text-content/PresentationText';
 
@@ -18,7 +18,7 @@ const PresentationContainer = styled.div`
   } 
 `
 
-export const Presentation = () => {
+export const Presentation: React.FC = () => {
   return (
     <PresentationContainer>
         <p>{PresentationText}</p>

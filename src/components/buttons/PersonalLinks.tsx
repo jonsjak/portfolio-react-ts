@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Links } from '../links/Links';
+import { Links } from '../../links/Links';
 
 const Navbar = styled.nav`
   margin-top: 24px;

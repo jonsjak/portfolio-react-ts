@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import '../App.scss';
+import { TechText } from "../text-content/TechText";
 
 const TechSectionContainer = styled.section`
   background-color: #EDFFFF;
@@ -17,13 +18,24 @@ const TechSectionContainer = styled.section`
     width: 500px;
   }
   };
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    padding: 355px 0;
+    gap: 143px;
+    p {
+      max-width: 50%;
+    }
+  }
 `;
 
-export const TechSection = () => {
+export const TechSection: React.FC = () => {
   return (
     <TechSectionContainer className="techSec">
       <h4 className="techHeader">Tech</h4>
-      <p className="techTxt">HTML, CSS, JavaScript, ES6, React, Redux, Node, Express, MongoDB, Pair-programming, Github, Agile methodology.</p>
+      <p>
+        {TechText.join(", ")}
+      </p>
     </TechSectionContainer>
   )
 };

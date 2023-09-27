@@ -22,7 +22,7 @@ const StyledHeroImage = styled.img`
   };
 `;
 
-const HeroImage = () => {
+const HeroImage: React.FC = () => {
   return (
     <StyledHeroImage src={oceanImg} alt="Beach and a row-boat"/>
   )

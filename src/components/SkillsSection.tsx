@@ -48,7 +48,7 @@ const SkillListHeader = styled.h5`
     display: inline-block;
 `;
 
-export const SkillsSection = () => {
+export const SkillsSection: React.FC = () => {
   return (
     <SkillSectionContainer>
         <SkillSectionHeader className="skillHeader">Skills</SkillSectionHeader>

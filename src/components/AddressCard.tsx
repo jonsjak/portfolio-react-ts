@@ -18,12 +18,22 @@ const AddressContainer = styled.address`
   }
 `;
 
-export const AddressCard = () => {
+export const AddressCard: React.FC = () => {
     return (
       <AddressContainer>
-        <a href="tel:+46707483261">{AddressInfo.phone}</a>
+        <a
+          href="tel:+46707483261"
+          target="_blank"
+          rel="noreferrer">
+            {AddressInfo.phone}
+        </a>
         <br></br>
-        <a href="mailto:jonas.jakobson@gmail.com"> {AddressInfo.email}</a>
+        <a
+          href="mailto:jonas.jakobson@gmail.com"
+          target="_blank"
+          rel="noreferrer">
+            {AddressInfo.email}
+        </a>
       </AddressContainer>
     )
   };

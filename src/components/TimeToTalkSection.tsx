@@ -1,6 +1,6 @@
 import { AddressCard } from './AddressCard';
 import { BusinessCard } from './BusinessCard';
-import { PersonalLinks } from './PersonalLinks';
+import { PersonalLinks } from './buttons/PersonalLinks';
 import styled from 'styled-components';
 
 const TimeToTalkSectionContainer = styled.div`
@@ -28,7 +28,7 @@ const TimeToTalkHeading = styled.h4`
   }
 `;
 
-export const TimeToTalkSection = () => {
+export const TimeToTalkSection: React.FC = () => {
   return (
     <TimeToTalkSectionContainer>
       <TimeToTalkHeading>Time to Talk</TimeToTalkHeading>
