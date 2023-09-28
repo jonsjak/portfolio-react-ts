@@ -42,13 +42,13 @@ const ScrollDownButton = styled.button`
   animation: ${scrollDown} 2s infinite;
 `;
 
-const ArrowImage = styled.img<{arrowFlipped: boolean}>`
+const ArrowImage = styled.img<{arrowflipped: string}>`
   width: 19px;
   height: 30px;
   left: 78px;
   top: 67px;
   transition: transform 0.7s;
-  transform: ${props => props.arrowFlipped ? 'rotate(180deg)' : 'none'};
+  transform: ${({arrowflipped}) => arrowflipped === "true" ? 'rotate(180deg)' : 'none'};
 `;
 
 const ScrollArrowFunction: React.FC = () => {
@@ -91,7 +91,7 @@ const ScrollArrowFunction: React.FC = () => {
 	}
   return ( 
     <ScrollDownButton onClick={onDownArrowClick} >
-      <ArrowImage src={downArrow} alt="Scroll down" arrowFlipped={arrowFlipped} />
+      <ArrowImage src={downArrow} alt="Scroll down" arrowflipped={arrowFlipped.toString()} />
     </ScrollDownButton>
   )
 };
