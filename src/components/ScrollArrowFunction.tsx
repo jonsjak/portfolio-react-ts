@@ -58,9 +58,7 @@ const ScrollArrowFunction: React.FC = () => {
   useEffect(() => {
     const toggleArrowDirection = () => {
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-        console.log(arrowFlipped);
         setArrowFlipped(!arrowFlipped);
-        console.log(!arrowFlipped);
       } else {
         setArrowFlipped(false);
       }
