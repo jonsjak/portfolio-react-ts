@@ -46,7 +46,7 @@ const TitleText = styled.div`
   padding: 18px auto;
 `;
 
-export const BusinessCard = () => {
+export const BusinessCard: React.FC = () => {
   return (
     <BusinessCardContainer>
       <ProfilePicture src={profileImg} alt="Jonas" />

@@ -4,7 +4,7 @@ import { MyWordsSection } from './MyWordsSection';
 import { SkillsSection } from './SkillsSection';
 import { TimeToTalkSection } from './TimeToTalkSection';
 
-export const Body = () => {
+export const Body: React.FC = () => {
   return (
     <>
       <TechSection />

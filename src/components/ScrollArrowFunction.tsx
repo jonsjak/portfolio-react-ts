@@ -42,11 +42,13 @@ const ScrollDownButton = styled.button`
   animation: ${scrollDown} 2s infinite;
 `;
 
-const ArrowImage = styled.img`
+const ArrowImage = styled.img<{arrowFlipped: boolean}>`
   width: 19px;
   height: 30px;
   left: 78px;
   top: 67px;
+  transition: transform 0.7s;
+  transform: ${props => props.arrowFlipped ? 'rotate(180deg)' : 'none'};
 `;
 
 const ScrollArrowFunction: React.FC = () => {
@@ -56,14 +58,13 @@ const ScrollArrowFunction: React.FC = () => {
   useEffect(() => {
     const toggleArrowDirection = () => {
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-        console.log("At the bottom of the page");
-        setArrowFlipped(true);
         console.log(arrowFlipped);
+        setArrowFlipped(!arrowFlipped);
+        console.log(!arrowFlipped);
       } else {
         setArrowFlipped(false);
-        console.log(!arrowFlipped);
       }
-    }
+    };
   
     // Keeps track of window position
     window.addEventListener("scroll", toggleArrowDirection);
@@ -90,7 +91,7 @@ const ScrollArrowFunction: React.FC = () => {
 	}
   return ( 
     <ScrollDownButton onClick={onDownArrowClick} >
-      <ArrowImage src={downArrow} alt="Scroll down" />
+      <ArrowImage src={downArrow} alt="Scroll down" arrowFlipped={arrowFlipped} />
     </ScrollDownButton>
   )
 };
