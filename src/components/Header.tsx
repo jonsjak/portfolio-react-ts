@@ -1,7 +1,7 @@
 import { Presentation } from './Presentation';
-import HeroImage from './HeroImage';
 import { BusinessCard } from './BusinessCard';
 import styled from 'styled-components';
+import ImageCarousel from './ImageCarousel';
 
 const HeaderSection = styled.section`
   @media (max-width: 667px) {
@@ -32,7 +32,7 @@ const PersonalInfo = styled.div`
 export const Header: React.FC = () => {
   return (
     <HeaderSection>
-      <HeroImage />
+      <ImageCarousel />
       <PersonalInfo>
         <BusinessCard />
         <Presentation />

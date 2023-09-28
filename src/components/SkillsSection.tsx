@@ -4,16 +4,19 @@ import { techLists } from "../lists/TechLists";
 
 const SkillSectionContainer = styled.div`
     background-color:  #FDF2E4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
     width: 100%;
     padding-top: 64px;
     gap: 66px;
     padding-bottom: 137px;
-
+    justify-content: center;
+    text-align: center;
+    
+    @media (max-width: 668px) {
+        display: flex;
+        align-items: center;
+        flex-direction: column;  
+    }
+    
     @media (min-width: 668px) and (max-width: 1024px) {
      display: grid;
      grid-template-columns: repeat(2, 200px);
