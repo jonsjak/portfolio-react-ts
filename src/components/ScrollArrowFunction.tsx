@@ -27,7 +27,9 @@ const ScrollDownButton = styled.button`
   left: 50%;
   animation: ${scrollDown} 2s infinite;
   &:hover {
-    opacity: 0.6;
+    opacity: 0.5;
+    scale: 1.2;
+    transform-origin: 0 0;
   }
 `;
 

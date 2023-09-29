@@ -20,6 +20,7 @@ export const GithubButton = styled.a`
     background-color: #F5F5F5;
     text-decoration: none;
     gap: 15px;
+    padding: 4px;
 
     &:hover {
       background-color: #EB5577;

@@ -22,6 +22,7 @@ export const LiveDemoButton = styled.a`
     justify-content: space-evenly;
     text-decoration: none;
     gap: 15px;
+    padding: 4px;
     
     &:hover {
     background-color: #0B24F5;

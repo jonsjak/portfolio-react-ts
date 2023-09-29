@@ -7,6 +7,11 @@ const Navbar = styled.nav`
   align-items: center;
   justify-content: space-evenly;
   min-width: 100%;
+
+  & a:hover {
+    opacity: 0.5;
+    scale: 1.3;
+  }
 `;
 
 export const PersonalLinks: React.FC = () => {

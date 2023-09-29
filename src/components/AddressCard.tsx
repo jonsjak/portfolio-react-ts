@@ -1,17 +1,10 @@
 import styled from "styled-components";
 import { AddressInfo } from "../text-content/AddressInfo";
+import { AddressBtn } from "./buttons/AddressBtn";
 
 const AddressContainer = styled.address`
   margin: 56px 0 99px 0;
   line-height: 1.5;
-  
-  a {
-    color: black;
-    font-size: 24px;
-    font-family: 'Satoshi', sans-serif;
-    text-decoration: none;
-    font-weight: 700;
-  }
 
   @media (min-width: 668px) {
     text-align: center;
@@ -21,19 +14,19 @@ const AddressContainer = styled.address`
 export const AddressCard: React.FC = () => {
     return (
       <AddressContainer>
-        <a
-          href="tel:+46707483261"
+        <AddressBtn
+          href={AddressInfo.hrefPhone}
           target="_blank"
           rel="noreferrer">
             {AddressInfo.phone}
-        </a>
+        </AddressBtn>
         <br></br>
-        <a
-          href="mailto:jonas.jakobson@gmail.com"
+        <AddressBtn
+          href={AddressInfo.hrefEmail}
           target="_blank"
           rel="noreferrer">
             {AddressInfo.email}
-        </a>
+        </AddressBtn>
       </AddressContainer>
     )
   };
