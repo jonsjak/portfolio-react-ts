@@ -2,28 +2,9 @@ import React, { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { CarouselImageArray } from '../lists/CarouselImageArray';
 
-const ImageContainer = styled.div`
-  display: none; //no hero on mobile device
-  height: 412px;
-  width: 100%;
+/* Animations for carousel */
 
-  @media (min-width: 668px) and (max-width: 1024px) {
-    display: inline-block;
-    width: 100%;
-    height: 412px;
-    margin-bottom: 71px;
-    object-fit: contain;
-    };
-  
-  @media (min-width: 1024px) {
-    display: inline-block;
-    height: 830px;
-    width: 50%;
-    object-fit: contain;
-  };
-`;
-
-// ken burns effect
+// Slide in right for big screen
 const SlideInRight = keyframes`
  0% {
     opacity: 0.2;
@@ -35,6 +16,7 @@ const SlideInRight = keyframes`
   }
 `;
 
+// slide in top for tablet
 const SlideInTop = keyframes`
  0% {
     opacity: 0.1;
@@ -47,6 +29,26 @@ const SlideInTop = keyframes`
     opacity: 1;
     transform: translateY(0);
   }
+`;
+
+const ImageContainer = styled.div`
+  display: none; //no hero on mobile device
+  height: 412px;
+  width: 100%;
+  overflow: hidden;
+
+  @media (min-width: 668px) and (max-width: 1024px) {
+    display: inline-block;
+    width: 100%;
+    height: 412px;
+    margin-bottom: 71px;
+    };
+  
+  @media (min-width: 1024px) {
+    display: block;
+    height: 100%;
+    width: 50%;
+  };
 `;
 
 

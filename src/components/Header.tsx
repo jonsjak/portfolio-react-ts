@@ -15,13 +15,14 @@ const HeaderSection = styled.section`
   }
 `;
 
+// left side of header in full-screen
 const PersonalInfo = styled.div`
   @media (min-width: 668px) and (max-width: 1024px) {
    margin: 0 24px;
   }
   @media (min-width: 1024px) {
-    height: 830px;
-    max-width: 50%;
+    max-height: 80%;
+    max-width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;

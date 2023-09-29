@@ -9,8 +9,7 @@ const scrollDown = keyframes`
     }
 
   50% {
-    transform: translate(-50%, 10%);
-    opacity: 50%;
+    transform: translate(-50%, -30%);
   }
   
   100% {
@@ -21,30 +20,20 @@ const scrollDown = keyframes`
 const ScrollDownButton = styled.button`
   border: none;
   background-color: transparent;
-  padding: 0;
-  outline: none;
   position: fixed;
-  font-family: 'Satoshi';
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 22px;
   color:#0B24F5;
-  width: 78px;
   z-index:999;
   bottom: 0vh;
   left: 50%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 32px;
   animation: ${scrollDown} 2s infinite;
+  &:hover {
+    opacity: 0.6;
+  }
 `;
 
 const ArrowImage = styled.img<{arrowflipped: string}>`
-  width: 19px;
-  height: 30px;
+  width: 40px;
+  height: 50px;
   left: 78px;
   top: 67px;
   transition: transform 0.7s;
