@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import ocean from '../images/carousel-slides/ocean.jpg';
-import goal from '../images/carousel-slides/goal.jpg';
-import stripe from '../images/carousel-slides/stripe.jpg';
-import waterfall from '../images/carousel-slides/waterfall.jpg';
-import fields from '../images/carousel-slides/fields.jpg';
 import styled, { keyframes } from 'styled-components';
+import { CarouselImageArray } from '../lists/CarouselImageArray';
 
 const ImageContainer = styled.div`
   display: none; //no hero on mobile device
@@ -27,56 +23,56 @@ const ImageContainer = styled.div`
   };
 `;
 
-// fadeIn animation
-const fadeIn = keyframes`
-  0% {
-    opacity: 0;
+// ken burns effect
+const SlideInRight = keyframes`
+ 0% {
+    opacity: 0.2;
+    transform: translateX(100%);
   }
   100% {
     opacity: 1;
+    transform: translateX(0);
   }
 `;
 
-// ken burns effect
-const kenBurns = keyframes`
+const SlideInTop = keyframes`
  0% {
-  transform: scale(1) translate(0, 0);
-  transform-origin: 50% 50%;
+    opacity: 0.1;
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 0.2;
   }
   100% {
-  transform: scale(1.25) translate(20px, 15px);
-  transform-origin: 50% 50%;
+    opacity: 1;
+    transform: translateY(0);
   }
-`
+`;
+
 
 const CarouselImage = styled.img`
     width: 100%;
     height: 100%;
     margin: 0 auto;
     object-fit: cover;
-    animation: ${fadeIn} 2s steps(2, end) both;
+
+    @media (min-width: 668px) and (max-width: 1024px) {
+      animation: ${SlideInTop} 1s ease-out;
+    }
 
     @media (min-width: 1024px) {
       object-position: 25%;
+      animation: ${SlideInRight} 1s ease-out;
     }
 `;
 
 const ImageCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
-  // image array for carousel
-  const images: string[] = [
-    ocean,
-    fields,
-    stripe,
-    waterfall,
-    goal,
-  ];
-
   // Display next image
   const nextImage = () => {
     setCurrentIndex((prevIndex: number) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      prevIndex === CarouselImageArray.length - 1 ? 0 : prevIndex + 1
     );
   };
   
@@ -84,7 +80,7 @@ const ImageCarousel: React.FC = () => {
   useEffect(() => {
     const timer = setInterval(() => {
         nextImage();
-    }, 4000);
+    }, 5000);
 
     return (() => {
         clearInterval(timer);
@@ -94,7 +90,7 @@ const ImageCarousel: React.FC = () => {
 
   return (
     <ImageContainer>
-      <CarouselImage src={images[currentIndex]} alt={`Slide no: ${currentIndex + 1}`} />
+      <CarouselImage src={CarouselImageArray[currentIndex]} alt={`Slide no: ${currentIndex + 1}`} />
     </ImageContainer>
   );
 };

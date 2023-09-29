@@ -11,6 +11,7 @@ const HeaderSection = styled.section`
   @media (min-width: 1024px) {
     display: flex;
     flex-direction: row-reverse;
+    height: 830px;
   }
 `;
 

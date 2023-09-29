@@ -1,4 +1,4 @@
-import electricCar from "../images/electric-car.jpg";
+import electricCar from "../images/optimized/electric-car.jpg";
 import articleIcon from "../images/article.svg";
 import styled from "styled-components";
 import { NewsText } from "../text-content/NewsText";

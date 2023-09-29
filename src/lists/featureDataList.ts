@@ -1,12 +1,12 @@
-import MovieGlobeImg from '../images/movieglobe.png';
-import SpaceMazeImg from '../images/space-maze.png';
-import TodoAppImage from '../images/todo-app.png';
-import WeatherAppImage from '../images/weather-app.jpg';
-import ZombieQuizImage from '../images/zombie-quiz.png';
-import MusicReleasesImage from '../images/music-releases.jpg';
-import HappyThoughtsImage from '../images/happy-thoughts.png';
-import AncientTimesImage from '../images/ancient-times.jpg';
-import ChatbotImage from '../images/chatbot.jpg';
+import MovieGlobeImg from '../images/optimized/movieglobe.png';
+import SpaceMazeImg from '../images/optimized/space-maze.png';
+import TodoAppImage from '../images/optimized/todo-app.png';
+import WeatherAppImage from '../images/optimized/weather-app.jpg';
+import ZombieQuizImage from '../images/optimized/zombie-quiz.png';
+import MusicReleasesImage from '../images/optimized/music-releases.jpg';
+import HappyThoughtsImage from '../images/optimized/happy-thoughts.png';
+import AncientTimesImage from '../images/optimized/ancient-times.jpg';
+import ChatbotImage from '../images/optimized/chatbot.jpg';
 
 export interface FeatureData {
     index: number;

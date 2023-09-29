@@ -1,4 +1,4 @@
-import profileImg from "../images/Portfolio.jpg";
+import profileImg from "../images/optimized/Portfolio.jpg";
 import styled from "styled-components";
 import { BussinessInfo } from "../text-content/BussinessInfo";
 
