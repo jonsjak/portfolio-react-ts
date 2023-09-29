@@ -19,12 +19,12 @@ const PersonalInfo = styled.div`
    margin: 0 24px;
   }
   @media (min-width: 1024px) {
-    height: 980px;
+    height: 830px;
     max-width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 auto;
+    margin: 100px auto;
     padding: 10px;
 }
 `;

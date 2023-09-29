@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import ocean from '../images/carousel-slides/ocean.jpg';
-import portfolio from '../images/Portfolio.jpg';
-import styled from 'styled-components';
+import goal from '../images/carousel-slides/goal.jpg';
+import stripe from '../images/carousel-slides/stripe.jpg';
+import waterfall from '../images/carousel-slides/waterfall.jpg';
+import fields from '../images/carousel-slides/fields.jpg';
+import styled, { keyframes } from 'styled-components';
 
 const ImageContainer = styled.div`
-  filter: grayscale(100%);
   display: none; //no hero on mobile device
-  object-fit: contain;
   height: 412px;
   width: 100%;
 
@@ -20,27 +21,56 @@ const ImageContainer = styled.div`
   
   @media (min-width: 1024px) {
     display: inline-block;
-    height: 980px;
+    height: 830px;
     width: 50%;
-    object-position: 12% 0px;
-    zoom: 0.7;
+    object-fit: contain;
   };
 `;
+
+// fadeIn animation
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+// ken burns effect
+const kenBurns = keyframes`
+ 0% {
+  transform: scale(1) translate(0, 0);
+  transform-origin: 50% 50%;
+  }
+  100% {
+  transform: scale(1.25) translate(20px, 15px);
+  transform-origin: 50% 50%;
+  }
+`
 
 const CarouselImage = styled.img`
     width: 100%;
     height: 100%;
     margin: 0 auto;
     object-fit: cover;
+    animation: ${fadeIn} 2s steps(2, end) both;
+
+    @media (min-width: 1024px) {
+      object-position: 25%;
+    }
 `;
 
 const ImageCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
+  // image array for carousel
   const images: string[] = [
-    `${ocean}`,
-    `${portfolio}`,
-    `${ocean}`,
+    ocean,
+    fields,
+    stripe,
+    waterfall,
+    goal,
   ];
 
   // Display next image
@@ -54,7 +84,7 @@ const ImageCarousel: React.FC = () => {
   useEffect(() => {
     const timer = setInterval(() => {
         nextImage();
-    }, 3000);
+    }, 4000);
 
     return (() => {
         clearInterval(timer);
