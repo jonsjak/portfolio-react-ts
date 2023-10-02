@@ -62,7 +62,7 @@ const ScrollArrowFunction: React.FC = () => {
     return () => {
       window.removeEventListener("scroll", toggleArrowDirection);
     };
-  }, []);  
+  });  
 
 	const onDownArrowClick = () => {
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
