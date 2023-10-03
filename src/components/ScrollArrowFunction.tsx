@@ -3,7 +3,7 @@ import downArrow from "../images/downarrow.svg";
 import styled, { keyframes } from "styled-components";
 
 //jumping arrow animation (scroll down)
-const scrollDown = keyframes`
+const JumpingArrowAnimation = keyframes`
   0% {
       transform: translate(-50%, -50%);
     }
@@ -17,7 +17,7 @@ const scrollDown = keyframes`
   }
 `;
 
-const ScrollDownButton = styled.button`
+const ScrollButton = styled.button`
   border: none;
   background-color: transparent;
   position: fixed;
@@ -25,7 +25,7 @@ const ScrollDownButton = styled.button`
   z-index:999;
   bottom: 0vh;
   left: 50%;
-  animation: ${scrollDown} 2s infinite;
+  animation: ${JumpingArrowAnimation} 2s infinite;
   &:hover {
     opacity: 0.5;
     scale: 1.2;
@@ -33,13 +33,13 @@ const ScrollDownButton = styled.button`
   }
 `;
 
-const ArrowImage = styled.img<{arrowflipped: string}>`
+const ArrowImage = styled.img<{isFlipped: boolean}>`
   width: 40px;
   height: 50px;
   left: 78px;
   top: 67px;
-  transition: transform 0.7s;
-  transform: ${({arrowflipped}) => arrowflipped === "true" ? 'rotate(180deg)' : 'none'};
+  transform: ${({isFlipped}) => (isFlipped ? "rotate(180deg)" : "rotate(0deg)")};
+  transition: transform 0.5s;
 `;
 
 const ScrollArrowFunction: React.FC = () => {
@@ -48,7 +48,10 @@ const ScrollArrowFunction: React.FC = () => {
 
   useEffect(() => {
     const toggleArrowDirection = () => {
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      const scrollPosition = window.innerHeight + window.scrollY;
+      const windowHeightThreshold = document.body.offsetHeight * 0.99;
+      // condition for flipping scroll arrow
+      if (scrollPosition >= windowHeightThreshold) {
         setArrowFlipped(!arrowFlipped);
       } else {
         setArrowFlipped(false);
@@ -62,10 +65,12 @@ const ScrollArrowFunction: React.FC = () => {
     return () => {
       window.removeEventListener("scroll", toggleArrowDirection);
     };
-  });  
+  }, [arrowFlipped]);  
 
 	const onDownArrowClick = () => {
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+    const scrollPosition = window.innerHeight + window.scrollY;
+    const windowHeightThreshold = document.body.offsetHeight * 0.99;
+    if (scrollPosition >= windowHeightThreshold) {
       // When btn is clicked, if at bottom scrolls back to top...
       setTimeout(() => {
         window.scrollTo({
@@ -79,9 +84,9 @@ const ScrollArrowFunction: React.FC = () => {
     });};
 	}
   return ( 
-    <ScrollDownButton onClick={onDownArrowClick} >
-      <ArrowImage src={downArrow} alt="Scroll down" arrowflipped={arrowFlipped.toString()} />
-    </ScrollDownButton>
+    <ScrollButton onClick={onDownArrowClick} >
+      <ArrowImage src={downArrow} alt="Scroll down" isFlipped={arrowFlipped} />
+    </ScrollButton>
   )
 };
 

@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const TimeToTalkSectionContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 64px 24px;
+  padding: 64px 24px 80px;
 
   img {
     margin-left: 0;
@@ -16,6 +16,7 @@ const TimeToTalkSectionContainer = styled.div`
 
   @media (min-width: 668px) {
     align-items: center;
+    padding-bottom: 120px;
   }
 `;
 
