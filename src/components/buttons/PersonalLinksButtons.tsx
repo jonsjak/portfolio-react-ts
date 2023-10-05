@@ -14,7 +14,7 @@ const Navbar = styled.nav`
   }
 `;
 
-export const PersonalLinks: React.FC = () => {
+export const PersonalLinksButtons: React.FC = () => {
   return (
     <Navbar>
       {Links.map((link, index) => (

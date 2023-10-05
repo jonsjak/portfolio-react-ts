@@ -81,7 +81,7 @@ export const MyWordsSection: React.FC = () => {
         <article>
             <h4>My Words</h4>
             <Image src={electricCar} alt="Electric Car" />
-            <TextBox>
+            <TextBox aria-label="article text box">
                 <DateHeading>March 2023</DateHeading>
                 <NewsHeading>{NewsText.header}</NewsHeading>
                 <p>{NewsText.text}</p>

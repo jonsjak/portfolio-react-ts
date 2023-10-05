@@ -83,8 +83,11 @@ const ScrollArrowFunction: React.FC = () => {
       behavior: 'smooth'
     });};
 	}
+  // Conditional aria-label for scroll
+  const ariaLabel = arrowFlipped ? "Scroll to top" : "Scroll down";
+
   return ( 
-    <ScrollButton onClick={onDownArrowClick} >
+    <ScrollButton onClick={onDownArrowClick} aria-label={ariaLabel} >
       <ArrowImage src={downArrow} alt="Scroll down" isFlipped={arrowFlipped} />
     </ScrollButton>
   )

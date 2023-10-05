@@ -48,7 +48,7 @@ const TitleText = styled.div`
 
 export const BusinessCard: React.FC = () => {
   return (
-    <BusinessCardContainer>
+    <BusinessCardContainer aria-label="profile information">
       <ProfilePicture src={profileImg} alt="Me sitting at bench" />
       <TitleText>
         <h1>{BussinessInfo.name}</h1>

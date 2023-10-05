@@ -13,8 +13,9 @@ const AddressContainer = styled.address`
 
 export const AddressCard: React.FC = () => {
     return (
-      <AddressContainer>
+      <AddressContainer aria-label="contact information">
         <AddressBtn
+          aria-label="telephone link"
           href={AddressInfo.hrefPhone}
           target="_blank"
           rel="noreferrer">
@@ -22,6 +23,7 @@ export const AddressCard: React.FC = () => {
         </AddressBtn>
         <br></br>
         <AddressBtn
+          aria-label="email link"
           href={AddressInfo.hrefEmail}
           target="_blank"
           rel="noreferrer">

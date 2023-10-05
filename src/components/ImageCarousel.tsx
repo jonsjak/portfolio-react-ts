@@ -91,7 +91,7 @@ const ImageCarousel: React.FC = () => {
   }, []);
 
   return (
-    <ImageContainer>
+    <ImageContainer aria-label="Image Carousel">
       <CarouselImage src={CarouselImageArray[currentIndex]} alt={`Slide no: ${currentIndex + 1}`} />
     </ImageContainer>
   );

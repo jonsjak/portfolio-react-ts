@@ -31,7 +31,7 @@ const TechSectionContainer = styled.section`
 
 export const TechSection: React.FC = () => {
   return (
-    <TechSectionContainer className="techSec">
+    <TechSectionContainer aria-label="tech-list container">
       <h4 className="techHeader">Tech</h4>
       <p>
         {TechText.join(", ")}

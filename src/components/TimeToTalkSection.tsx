@@ -1,6 +1,6 @@
 import { AddressCard } from './AddressCard';
 import { BusinessCard } from './BusinessCard';
-import { PersonalLinks } from './buttons/PersonalLinks';
+import { PersonalLinksButtons } from './buttons/PersonalLinksButtons';
 import styled from 'styled-components';
 
 const TimeToTalkSectionContainer = styled.div`
@@ -35,7 +35,7 @@ export const TimeToTalkSection: React.FC = () => {
       <TimeToTalkHeading>Time to Talk</TimeToTalkHeading>
       <BusinessCard />
       <AddressCard />
-      <PersonalLinks />
+      <PersonalLinksButtons />
     </TimeToTalkSectionContainer>
   )
 }

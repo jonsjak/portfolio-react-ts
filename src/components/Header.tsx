@@ -16,13 +16,13 @@ const HeaderSection = styled.section`
 `;
 
 // left side of header in full-screen
-const PersonalInfo = styled.div`
+const HeaderLeft = styled.div`
   @media (min-width: 668px) and (max-width: 1024px) {
    margin: 0 24px;
   }
   @media (min-width: 1024px) {
     max-height: 80%;
-    max-width: 40%;
+    max-width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,10 +35,10 @@ export const Header: React.FC = () => {
   return (
     <HeaderSection>
       <ImageCarousel />
-      <PersonalInfo>
+      <HeaderLeft>
         <BusinessCard />
         <Presentation />
-      </PersonalInfo>
+      </HeaderLeft>
     </HeaderSection>
   )
 }

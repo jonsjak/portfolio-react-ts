@@ -102,9 +102,9 @@ export const FeatureSection: React.FC = () => {
         <ArticleContainer key={index}>
           <FeatureImage src={feature.imageSrc} alt={feature.altText} />
           <ArticleText>
-            <h2 className="newsHeader">{feature.title}</h2>
-            <p className="newsTxt">{feature.description}</p>
-            <Tags>
+            <h2 aria-label="news header">{feature.title}</h2>
+            <p aria-label="news text">{feature.description}</p>
+            <Tags aria-label="keyword tags">
               {feature.featureTags.map((tag, tagIndex) => (
                 <p key={tagIndex}>{tag}</p>
               ))}
