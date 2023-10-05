@@ -47,8 +47,8 @@ const SkillSectionHeader = styled.h4`
 
 const SkillListHeader = styled.h5`
     color: white;
-    padding: 2px;
-    display: inline-block;
+    padding: 6px;
+    display: inline;
 `;
 
 export const SkillsSection: React.FC = () => {
@@ -85,7 +85,7 @@ export const SkillsSection: React.FC = () => {
         </div>
 
         <div>
-            <SkillListHeader style={{background: "#6DB486"}}>Upcoming</SkillListHeader>
+            <SkillListHeader style={{background: "#55ab73"}}>Upcoming</SkillListHeader>
             <SkillList>
                 {techLists.upcomingList.map((object) => (
                 <li key={object}>{object}</li>

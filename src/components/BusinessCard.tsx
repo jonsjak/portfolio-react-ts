@@ -49,7 +49,7 @@ const TitleText = styled.div`
 export const BusinessCard: React.FC = () => {
   return (
     <BusinessCardContainer>
-      <ProfilePicture src={profileImg} alt="Jonas" />
+      <ProfilePicture src={profileImg} alt="Me sitting at bench" />
       <TitleText>
         <h1>{BussinessInfo.name}</h1>
         <h2>{BussinessInfo.jobTitle}</h2>
