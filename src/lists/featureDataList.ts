@@ -1,4 +1,4 @@
-import MovieGlobeImg from '../images/optimized/movieglobe.png';
+/* import MovieGlobeImg from '../images/optimized/movieglobe.png'; */
 import SpaceMazeImg from '../images/optimized/space-maze.png';
 import TodoAppImage from '../images/optimized/todo-app.png';
 import WeatherAppImage from '../images/optimized/weather-app.jpg';
@@ -19,7 +19,7 @@ export interface FeatureData {
 }
 
 export const FeatureDataList: FeatureData[] = [
-    {
+    /* {
         index: 1,
         imageSrc: MovieGlobeImg,
         altText: "Screenshot of The MovieGlobe Project",
@@ -28,7 +28,7 @@ export const FeatureDataList: FeatureData[] = [
         featureTags:  ["HTML5", "CSS", "React", "Redux", "Access Token", "Styled Components"],
         githubLink: "https://github.com/jonsjak/finalproject-front-jonas-vera",
         deployLink: "https://movie-globe.netlify.app/"
-    },
+    }, */
     {
         index: 2,
         imageSrc: TodoAppImage,
