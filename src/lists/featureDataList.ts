@@ -97,7 +97,7 @@ export const FeatureDataList: FeatureData[] = [
         description: "App fetching weather data, altering imagery and textual content based on the forecast data",
         featureTags: ["HTML5", "CSS", "Vanilla.js", "API"],
         githubLink: "https://github.com/Technigo/project-weather-app/pull/265",
-        deployLink: "https://cheery-pasca-c07ee4.netlify.app/"
+        deployLink: "https://neon-frangipane-4ca607.netlify.app/"
     }
 ];
 
