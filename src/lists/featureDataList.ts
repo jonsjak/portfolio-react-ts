@@ -6,6 +6,8 @@ import ZombieQuizImage from '../images/optimized/zombie-quiz.png';
 import MusicReleasesImage from '../images/optimized/music-releases.jpg';
 import HappyThoughtsImage from '../images/optimized/happy-thoughts.png';
 import ChatbotImage from '../images/optimized/chatbot.jpg';
+import MovieGlobeImage from '../images/optimized/movieglobe.jpg';
+import StudyOclock from '../images/optimized/studyOclock.jpg';
 
 export interface FeatureData {
     index: number;
@@ -19,16 +21,26 @@ export interface FeatureData {
 }
 
 export const FeatureDataList: FeatureData[] = [
-    /* {
+    {
+      index: 0,
+      imageSrc: StudyOclock,
+      altText: "Screenshot of The Study O'clock App",
+      title: "Study O'clock",
+      description: "Study O'clock lets you monitor your study and break time to maximize performance",
+      featureTags:  ["React", "Redux", "Styled Components"],
+      githubLink: "https://github.com/jonsjak/Study-clock",
+      deployLink: "https://studyoclock.netlify.app/"
+    },
+    {
         index: 1,
-        imageSrc: MovieGlobeImg,
+        imageSrc: MovieGlobeImage,
         altText: "Screenshot of The MovieGlobe Project",
         title: "The Movie Location Globe",
         description: "Final project at Technigo. An interactive movie map for finding new movies and travel inspiration.",
         featureTags:  ["HTML5", "CSS", "React", "Redux", "Access Token", "Styled Components"],
         githubLink: "https://github.com/jonsjak/finalproject-front-jonas-vera",
         deployLink: "https://movie-globe.netlify.app/"
-    }, */
+    },
     {
         index: 2,
         imageSrc: TodoAppImage,
