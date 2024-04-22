@@ -1,4 +1,3 @@
-/* import MovieGlobeImg from '../images/optimized/movieglobe.png'; */
 import SpaceMazeImg from '../images/optimized/space-maze.png';
 import TodoAppImage from '../images/optimized/todo-app.png';
 import WeatherAppImage from '../images/optimized/weather-app.jpg';
@@ -6,7 +5,6 @@ import ZombieQuizImage from '../images/optimized/zombie-quiz.png';
 import MusicReleasesImage from '../images/optimized/music-releases.jpg';
 import HappyThoughtsImage from '../images/optimized/happy-thoughts.png';
 import ChatbotImage from '../images/optimized/chatbot.jpg';
-import MovieGlobeImage from '../images/optimized/movieglobe.jpg';
 import StudyOclock from '../images/optimized/studyOclock.jpg';
 
 export interface FeatureData {
@@ -33,16 +31,6 @@ export const FeatureDataList: FeatureData[] = [
     },
     {
         index: 1,
-        imageSrc: MovieGlobeImage,
-        altText: "Screenshot of The MovieGlobe Project",
-        title: "The Movie Location Globe",
-        description: "Final project at Technigo. An interactive movie map for finding new movies and travel inspiration.",
-        featureTags:  ["HTML5", "CSS", "React", "Redux", "Access Token", "Styled Components"],
-        githubLink: "https://github.com/jonsjak/finalproject-front-jonas-vera",
-        deployLink: "https://movie-globe.netlify.app/"
-    },
-    {
-        index: 2,
         imageSrc: TodoAppImage,
         altText: "Screenshot of The Todo app Project",
         title: "Childish to-do-app",
@@ -52,7 +40,7 @@ export const FeatureDataList: FeatureData[] = [
         deployLink: "https://jonastodoapp.netlify.app/"
     },
     {
-        index: 3,
+        index: 2,
         imageSrc: SpaceMazeImg,
         altText: "Screenshot of The Space Maze Project",
         title: "The Space Maze",
@@ -62,7 +50,7 @@ export const FeatureDataList: FeatureData[] = [
         deployLink: "https://the-great-space-maze.netlify.app/"
     },
     {
-        index: 4,
+        index: 3,
         imageSrc: HappyThoughtsImage,
         altText: "Screenshot of The HappyThoughts project",
         title: "Happy Thoughts!",
@@ -72,7 +60,7 @@ export const FeatureDataList: FeatureData[] = [
         deployLink: "https://eloquent-bunny-a273b7.netlify.app/"
     },
     {
-        index: 5,
+        index: 4,
         imageSrc: ZombieQuizImage,
         altText: "Screenshot of the Zombie Game Project",
         title: "Zombie Quiz Game",
@@ -82,7 +70,7 @@ export const FeatureDataList: FeatureData[] = [
         deployLink: "https://cute-pasca-d39626.netlify.app/"
     },
     {
-        index: 6,
+        index: 5,
         imageSrc: MusicReleasesImage,
         altText: "Screenshot of the Music Release Site",
         title: "Music release app built in React",
@@ -92,7 +80,7 @@ export const FeatureDataList: FeatureData[] = [
         deployLink: "https://moonlit-paprenjak-b2f391.netlify.app/"
     },
     {
-        index: 7,
+        index: 6,
         imageSrc: ChatbotImage,
         altText: "Screenshot of the Chatbot Project",
         title: "Quiz Bot built in Javascript",
@@ -102,7 +90,7 @@ export const FeatureDataList: FeatureData[] = [
         deployLink: "https://prismatic-cajeta-1efba0.netlify.app"
     },
     {
-        index: 8,
+        index: 7,
         imageSrc:WeatherAppImage,
         altText: "Screenshot of the Weather App",
         title: "Weather App using API fetch",
@@ -112,26 +100,3 @@ export const FeatureDataList: FeatureData[] = [
         deployLink: "https://neon-frangipane-4ca607.netlify.app/"
     }
 ];
-
-/* const NotUsedFeatures: FeatureData = [
-    {
-        index: 9,
-        imageSrc: AncientTimesImage,
-        altText: "Screenshot of the Ancient Times News Project",
-        title: "The Ancient Times News Site",
-        description: "Where it all started. A thematic news site landing page set in ancient times",
-        featureTags: ["HTML5", "CSS"],
-        githubLink: "https://github.com/jonsjak/project-news-site",
-        deployLink: "https://the-ancient-times-news-site.netlify.app/"
-    },
-    {
-    index: 10,
-    imageSrc: GuessWhoImage,
-    altText: "Screenshot of the Guess Who Game Project",
-    title: "Guess Who!",
-    description: "Online version of the kids game classic 'Guess Who'. Find the secret person by asking yes-or-no-question about the character.",
-    featureTags: ["HTML5", "CSS", "Vanilla.js"],
-    githubLink: "https://github.com/jonsjak/project-guess-who",
-    deployLink: "https://earnest-cactus-488c67.netlify.app/"   
-    }
-] */
